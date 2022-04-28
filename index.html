@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>JS Practice</title>
+</head>
+<body>
+    <h1>Where is my script?</h1>
+<script type = "text/javascript">
+    // alert( 'Всем привет!' );
+
+
+// function showMessage(nameA, helloB = 'чувак!') {
+// alert( 'Hello, ' +helloB );
+// }
+// showMessage();
+
+// let a = +prompt('first letter', 1);
+// let b = +prompt('second letter', 2);
+// alert(a+b);
+
+    // let age = prompt('ВВедите возраст :', '');
+    // // alert  (age);
+
+    // if (age > 18) {
+    //     alert('ok');
+    // } else {
+    //     alert('А родители разрешили?');
+    // }
+
+// // НЕ РАБОТАЕТ
+//     let age = prompt('ВВедите возраст :', '');
+//     alert  (age);
+//     function checkAge(age) {
+//         if (age > 18) {
+//         return true;
+//         } else {
+//         return confirm('А родители разрешили?');
+//         }
+//     }
+//     checkAge();
+  
+
+// // НЕ РАБОТАЕТ при значении false (второй вызов)
+// let age = prompt('Сколько вам лет?', '');
+// if (checkAge(age)) {
+//   alert( 'Доступ получен' );
+// } else {
+//   alert( 'Доступ закрыт' );
+// }
+
+//   function checkAge(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return confirm('А родители разрешили?');
+//   }
+// }
+
+// ________________________________
+// let age = prompt('Сколько вам лет?', '');
+
+// function checkAge(age) {return (age>18)? true : confirm('Родители разрешили?');}
+// checkAge(age)? alert( 'Доступ получен' ): alert( 'Доступ закрыт' );
+
+// ______________________
+
+// if (checkAge(age)) {
+//   alert( 'Доступ получен' );
+// } else {
+//   alert( 'Доступ закрыт' );
+// }
+// let accessAllowed = (age > 18) ? true : false;
+// // alert(accessAllowed);
+
+// __________________________________________________________
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Родители разрешили?');
+//   }
+// }
+
+// function checkAge(age) {return (age>18)? true : confirm('Родители разрешили?');}
+// function checkAge(age) {return (age>18) || confirm('Родители разрешили?');}
+
+// ----------------------------------------------------------------
+
+// let accessAllowed;
+// let age = prompt('Сколько вам лет?', '');
+
+// if (age > 18) {
+//   accessAllowed = true;
+// } else {
+//   accessAllowed = false;
+// }
+// alert(accessAllowed);
+// ----------------------------------------------------------
+
+// let age = prompt('Сколько вам лет?', '');
+// let accessAllowed = (age > 18) ? true : false;
+// alert(accessAllowed);
+
+
+// --------------------------------------------------------------------------
+
+// function checkMin(a, b) {
+//   if (a > b) {
+//     return b;
+//   } else {
+//     return a;
+//   }
+// }
+
+// alert (checkMin (2,5));
+// alert (checkMin (3,-1));
+// alert (checkMin (1,1));
+
+// // // короткая запись
+// function checkMin (a, b) {return (a > b) ?  b : a;}
+
+// ----------------------------------------------------------------------
+
+// let x = prompt('введите число и степень через запятую', 'x');
+// let n = prompt('введите число и степень через запятую', 'n');
+
+// function pow (x, n) {
+   
+//     let result = x;
+//     for (i=1; i<n; i++) {
+//       result = result * x;
+//     }
+//     return result;
+// }
+// alert (pow(x,n));
+
+// _____________________________________________________
+
+// function ask(question, yes,no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// function Y(){
+//     alert ('Да, я ел.');
+// }
+// function N(){
+//     alert ('Нет, я сегодня не ел.');
+// }
+
+// ask ('Ты ел сегодня?', Y, N);
+
+// ________________________________________________________________________
+
+
+// let accessAllowed;
+// let age = prompt('Сколько вам лет?', '');
+
+// if (age > 18) {
+//   accessAllowed = function(){
+//       alert ('Привет взрослый');
+//   };
+// } else {
+//   accessAllowed = function(){
+//       alert('Еще рано');
+//   };
+// }
+// alert(accessAllowed);
+// _____________________________________
+
+// Краткий вариант с использованием функций
+
+// let age = prompt('Сколько вам лет?', '');
+
+//   let accessAllowed = (age>18)?
+//   function(){alert ('Привет взрослый');}:
+//   function(){alert('Еще рано');};
+
+// alert(accessAllowed);
+// ________________________________________________
+
+// Переписать с использованием фунции-стрелки
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// );
+
+// __________________
+
+
+// let ask = (question, yes, no) => {return (confirm(question))? yes() : no();}
+// ask(
+//   "Вы согласны?",
+//   () => alert("Вы согласились."), 
+//   () => alert("Вы отменили выполнение.") );
+
+// _____________________________________________________
+  
+//   function ask (question, yes, no) {return (confirm(question))? yes() : no();}
+// ask(
+//   "Вы согласны?",
+//   () => alert("Вы согласились."), 
+//   () => alert("Вы отменили выполнение.") );
+
+//   ask(
+//   "Можно еще вопрос?",
+//   () => alert("Вы согласились на второй вопрос."), 
+//   () => alert("Вы отменили второй вопрос.") );
+// _____________________________________________
+
+
+
+
+</script>
+<script src="mycode.js"></script>
+</body>
+</html>
