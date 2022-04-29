@@ -603,8 +603,8 @@ audiX.driveFast()
 //     }
 // }
 
-// const rect = new Rectange(5, 10)
-// const rect2 = new Rectange(5, 70)
-// rect.calcArea()
-// console.log(rect.calcArea())
-// console.log(rect2.calcArea())
+const rect = new Rectange(5, 10)
+const rect2 = new Rectange(5, 70)
+rect.calcArea()
+console.log(rect.calcArea())
+console.log(rect2.calcArea())
