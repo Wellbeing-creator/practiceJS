@@ -79,27 +79,58 @@
 // console.log(isCh || isOpen);
 // // ответ: false
 
-// Оператор отрицания - меняет значение
-const isCh = false;
-const isOpen = false;
-console.log(isCh || !isOpen);
-// ответ: true
+// // Оператор отрицания - меняет значение
+// const isCh = false;
+// const isOpen = false;
+// console.log(isCh || !isOpen);
+// // ответ: true
 
-// Приоритетность операторов ("*" > "+")
-console.log(2 + 2 * 2 === 8);
-// ответ: false
+// // Приоритетность операторов ("*" > "+")
+// console.log(2 + 2 * 2 === 8);
+// // ответ: false
 
-console.log(2 + 2 * 2 != 8);
-// ответ: true
+// console.log(2 + 2 * 2 != 8);
+// // ответ: true
 
-console.log(2 + 2 * 2 !== 8);
-// ответ: true
-
-
+// console.log(2 + 2 * 2 !== 8);
+// // ответ: true
 
 // -----------------------------------------------
 
+// Начало работы над проектом
+// Запись данных в объект
 
+const numberOfMovies = +prompt('How many movies have you seen?','');
+// alert('You have seen ' + numberOfMovies + ' movies.');
+
+const personalMovieDB = {
+    count: numberOfMovies,
+    movies: {},
+    actors:{},
+    genres:[],
+    privat: false
+}
+
+// const lastSeenMovie = prompt('One of the last seen movies?','');
+// if (lastSeenMovie != null || '') {
+//     alert('Your last seen movie is ' + lastSeenMovie + '.');
+//     let movieScore = +prompt('What is your score for this movie from 1 to 10?', '');
+//     if (movieScore != null) {
+//         alert('The movie score is ' + movieScore);
+//     }
+// } else {
+//     alert("You haven't entered a movie");  
+// }
+
+const a = prompt('One of the last seen movies?','');
+      b = prompt('What is your score for this movie from 1 to 10?', '');
+      c = prompt('One of the last seen movies?','');
+      d = prompt('What is your score for this movie from 1 to 10?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
 
 // -----------------------------------------------
 
